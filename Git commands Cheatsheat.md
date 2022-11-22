@@ -1,7 +1,5 @@
 
-  
 
-[Creating Snapshots](*Creating-Snapshots)
 
 # Creating Snapshots 
 
