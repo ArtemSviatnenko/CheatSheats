@@ -1,4 +1,7 @@
-**CONTENTS:** 
+**TABLE OF CONTENTS:** 
+
+
+[Creating Snapshots ](# Creating Snapshots)
 
 # Creating Snapshots 
 
