@@ -231,106 +231,186 @@ git tag -d v1.0                               # Deletes the given tag
 
 
 ### Managing branches 
-git branch bugfix         # Creates a new branch called bugfix 
-git checkout bugfix         # Switches to the bugfix branch 
-git switch bugfix        # Same as the above 
-git switch -C bugfix         # Creates and switches 
-git branch -d bugfix         # Deletes the bugfix branch 
-
+```bash
+git branch bugfix                             # Creates a new branch called bugfix 
+```
+```bash
+git checkout bugfix                           # Switches to the bugfix branch 
+```
+```bash
+git switch bugfix                             # Same as the above 
+```
+```bash
+git switch -C bugfix                          # Creates and switches 
+```
+```bash
+git branch -d bugfix                          # Deletes the bugfix branch 
+```
 
 ### Comparing branches 
-git log master..bugfix         # Lists the commits in the bugfix branch not in master 
-git diff master..bugfix         # Shows the summary of changes 
-
+```bash
+git log master..bugfix                        # Lists the commits in the bugfix branch not in master 
+```
+```bash
+git diff master..bugfix                       # Shows the summary of changes 
+```
 ### Stashing 
-git stash push -m “Best rules”         # Creates a new stash
-git stash list         # Lists all the stashes 
-git stash show stash@{1}         # Shows the given stash 
-git stash show 1         # Shortcut for stash@{1} 
-git stash apply 1         # Applies the given stash to the working dir 
-git stash drop 1         # Deletes the given stash
-git stash clear         # Deletes all the stashes 
-
+```bash
+git stash push -m “Best rules”                # Creates a new stash
+```
+```bash
+git stash list                                # Lists all the stashes 
+```
+```bash
+git stash show stash@{1}                      # Shows the given stash 
+```
+```bash
+git stash show 1                              # Shortcut for stash@{1} 
+```
+```bash
+git stash apply 1                             # Applies the given stash to the working dir 
+```
+```bash
+git stash drop 1                              # Deletes the given stash
+```
+```bash
+git stash clear                               # Deletes all the stashes 
+```
 
 ### Merging
-git merge bugfix         # Merges the bugfix branch into the current branch
-git merge --no-ff bugfix         # Creates a merge commit even if FF is possible
-git merge --squash bugfix        # Performs a squash merge
-git merge --abort         # Aborts the merge 
-
+```bash
+git merge bugfix                              # Merges the bugfix branch into the current branch
+```
+```bash
+git merge --no-ff bugfix                      # Creates a merge commit even if FF is possible
+```
+```bash
+git merge --squash bugfix                     # Performs a squash merge
+```
+```bash
+git merge --abort                             # Aborts the merge 
+```
 
 ### Viewing the merged branches
-git branch --merged         # Shows the merged branches 
-git branch --no-merged        # Shows the unmerged branches 
-
+```bash
+git branch --merged                           # Shows the merged branches 
+```
+```bash
+git branch --no-merged                        # Shows the unmerged branches 
+```
 
 ### Rebasing 
-git rebase master         # Changes the base of the current branch 
-
+```bash
+git rebase master                             # Changes the base of the current branch 
+```
 
 ### Cherry picking
-git cherry-pick dad47ed         # Applies the given commit on the current branch 
-
+```bash
+git cherry-pick dad47ed                       # Applies the given commit on the current branch 
+```
 
 # Collaboration 
 
 
 ### Cloning a repository 
+```bash
 git clone url 
-
+```
 
 ### Syncing with remotes 
-git fetch origin master         # Fetches master from origin 
-git fetch origin         # Fetches all objects from origin 
-git fetch         # Shortcut for “git fetch origin” 
-git pull         # Fetch + merge 
-git push origin master         # Pushes master to origin 
-git push         # Shortcut for “git push origin master” 
-
+```bash
+git fetch origin master                       # Fetches master from origin 
+```
+```bash
+git fetch origin                              # Fetches all objects from origin 
+```
+```bash
+git fetch                                     # Shortcut for “git fetch origin” 
+```
+```bash
+git pull                                      # Fetch + merge 
+```
+```bash
+git push origin master                        # Pushes master to origin 
+```
+```bash
+git push                                      # Shortcut for “git push origin master” 
+```
 
 ### Sharing tags 
-git push origin v1.0         # Pushes tag v1.0 to origin
+```bash
+git push origin v1.0                          # Pushes tag v1.0 to origin
+```
+```bash
 git push origin —delete v1.0 
-
+```
 
 
 
 ### Sharing branches
-git branch -r         # Shows remote tracking branches 
-git branch -vv         # Shows local & remote tracking branches
-git push -u origin bugfix        # Pushes bugfix to origin
-git push -d origin bugfix         # Removes bugfix from origin 
-
+```bash
+git branch -r                                 # Shows remote tracking branches 
+```
+```bash
+git branch -vv                                # Shows local & remote tracking branches
+```
+```bash
+git push -u origin bugfix                     # Pushes bugfix to origin
+```
+```bash
+git push -d origin bugfix                     # Removes bugfix from origin 
+```
 
 ### Managing remotes
-git remote         # Shows remote repos
-git remote add upstream url         # Adds a new remote called upstream 
-git remote rm upstream         # Remotes upstream 
-
+```bash
+git remote                                    # Shows remote repos
+```
+```bash
+git remote add upstream url                   # Adds a new remote called upstream 
+```
+```bash
+git remote rm upstream                        # Remotes upstream 
+```
 
 # Rewriting History
 
 
 ### Undoing commits 
-git reset --soft HEAD^         # Removes the last commit, keeps changed staged 
-git reset --mixed HEAD^         # Unstages the changes as well 
-git reset --hard HEAD^         # Discards local changes 
-
+```bash
+git reset --soft HEAD^                        # Removes the last commit, keeps changed staged 
+```
+```bash
+git reset --mixed HEAD^                       # Unstages the changes as well 
+```
+```bash
+git reset --hard HEAD^                        # Discards local changes 
+```
 
 ### Reverting commits 
-git revert 72856ea         # Reverts the given commit 
-git revert HEAD~3..         # Reverts the last three commits
+```bash
+git revert 72856ea                            # Reverts the given commit 
+```
+```bash
+git revert HEAD~3..                           # Reverts the last three commits
+```
+```bash
 git revert --no-commit HEAD~3.. 
-
+```
 
 ### Recovering lost commits 
-git reflog         # Shows the history of HEAD 
-git reflog show bugfix         # Shows the history of bugfix pointer 
-
+```bash
+git reflog                                    # Shows the history of HEAD 
+```
+```bash
+git reflog show bugfix                        # Shows the history of bugfix pointer 
+```
 
 ### Amending the last commit 
+```bash
 git commit --amend
+```
 
-
-# Interactive rebasing 
+### Interactive rebasing 
+```bash
 git rebase -i HEAD~5
+```
