@@ -1,5 +1,10 @@
-
-
+## Table of contents ##
+- [Creating Snapshots](#creating-snapshots)
+- [Browsing History](#browsing-history)
+- [Branching and Merging](#branching-and-merging)
+- [Collaboration](#collaboration)
+- [Rewriting History](#rewriting-history)
+  
 
 # Creating Snapshots 
 
@@ -227,7 +232,7 @@ git tag                                       # Lists all the tags
 git tag -d v1.0                               # Deletes the given tag 
 ```
 
-# Branching & Merging 
+# Branching and Merging 
 
 
 ### Managing branches 
